@@ -1,13 +1,13 @@
 """
 Creates graphs that provide insight to the behaviour of Folding@Home
-leader boards.
+leaderboards.
 
 In particular, the following is examined:
-        - Team rank vs Points
+        - User rank vs Points
         - Difference between successive ranks vs Points
 
 With the objective of understanding how difficult it is to climb
-the leader boards (i.e. is it a linear function? logarithmic? or
+the leaderboards (i.e. is it a linear function? logarithmic? or
 otherwise?).
 """
 
@@ -26,7 +26,7 @@ def plotRawData(df):
     Plots the raw FAH statistics.
 
     In particular, the following lines should be plotted:
-        - Team rank vs Points
+        - User rank vs Points
         - Difference between successive ranks vs Points
     """
     title = "Folding@Home"
@@ -64,7 +64,7 @@ def plotCleansedData(df):
     Plots FAH statistics after some data cleansing.
 
     In particular, the following lines should be plotted:
-        - Team rank vs Points
+        - User rank vs Points
         - Difference between successive ranks vs Points
     """
     title = "Folding@Home"
