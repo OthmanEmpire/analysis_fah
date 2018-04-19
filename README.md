@@ -31,14 +31,12 @@ the same number of points. However, if we examine the raw data
 that contradict that statement. There are data points with identical
 number of points but differ in global rankings. The reason behind
 this behaviour is unknown and is most likely tied to the ranking
-algorithm that FAH uses. Notice that the raw data file contains
-roughly 5,000,000 entries but the leaderboard only starts from
-near 2,000,000. This is where users are 'crunched' in.
+algorithm that FAH uses.
 
 - The difference between successive ranks plot (green line) is
 calculated from the raw data. It contains spikes due to the natural
-variation fo the raw data. However, there is one particularly large
-spike that needs to be filtered, cause by several missing data points.
+variation of the raw data. However, there is one particularly large
+spike that needs to be filtered, cause by consecutive missing data points.
 
 - There exist many dummy or abandoned user accounts in the leaderboards.
 The 'real' leaderboards most likely begin from 500,000 and better. This is
@@ -46,9 +44,9 @@ because ranks worse than 500,000 require at most 1 point to progress to a
 subsequent rank and even low end machines can produce at least 100 points
 per day.
 
-- The leaderboards behaves like an exp(exp(x)) function at glance. As the scale
-used to plot is linear-log, thus any exponential growth is suppressed in the
-y-axis, it still visually looks like an exponential graph.
+- The plotted curve behaves like an exp(exp(x)) function at glance; the
+scale used is linear-log thus any exponential growth is suppressed in the
+y-axis yet it still visually looks like an exponential graph.
 
 
 Plot - Cleansed Data
@@ -59,15 +57,15 @@ Points of interest:
 
 - After applying a filter on the the raw data (removing data points with the
 same number of points but differing global rankings), the data points are
-more concentrated at ranks 500,000 and better. This supports the theory
-that the 'real' leaderboards begins at 500,000 and better.
+more concentrated at rank 500,000 and better. This supports the theory
+that the 'real' leaderboards begins at 500,000.
 
 - After applying a rolling median (10 data points wide) and then a rolling mean
 (20 data points wide), the difference between successive ranks (green line) is
-visually similar to the curve above it (red line). Given also that it is the
-derivative, this implies that the curve (red line) obeys an exponential
-function since the derivative of an exponential function is proportional
-to itself.
+visually similar to the curve above it (red line). Given also that the green
+line is its derivative, this implies that the curve (red line) obeys an
+exponential function since the derivative of an exponential function is
+proportional to itself.
 
 
 Conclusion
