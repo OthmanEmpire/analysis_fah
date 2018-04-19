@@ -46,7 +46,7 @@ because ranks worse than 500,000 require at most 1 point to progress to a
 subsequent rank and even low end machines can produce at least 100 points
 per day.
 
-- The leaderboards behaves like a e^e^x function at glance. As the scale
+- The leaderboards behaves like an exp(exp(x)) function at glance. As the scale
 used to plot is linear-log, thus any exponential growth is suppressed in the
 y-axis, it still visually looks like an exponential graph.
 
@@ -74,8 +74,8 @@ Conclusion
 ----------
 - Climbing the rankings from 1,750,000 to 500,000 should be quick due to many
 dummy or abandoned user accounts.
-- Climbing the rankings from 500,000 to 1 seems to obey a e^e^x function thus
-the difficulty rapidly escalates over that interval.
+- Climbing the rankings from 500,000 to 1 seems to obey a exp(exp(x)) function
+thus the difficulty rapidly escalates over that interval.
 
 
 Author
