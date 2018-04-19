@@ -4,6 +4,9 @@ Here we perform some quick analysis to study the behaviour of
 the Folding@Home leaderboards. The goal is to gain some intuition
 of how difficult it is to climb the leaderboards.
 
+
+Data
+----
 There are two plots of interest shown below. The first is the
 plot of the raw data from 2016-01-07 (when exporting the entire
 leaderboards was available which it no longer is). The second plot
@@ -15,8 +18,8 @@ a measure of data point density (i.e. the red line in the plots below
 is more opaque in regions where less data is available).
 
 
-Raw Data Plot
--------------
+Plot - Raw Data
+---------------
 ![](plot_raw_(07-01-2016).png)
 
 Points of interest:
@@ -48,20 +51,31 @@ used to plot is linear-log, thus any exponential growth is suppressed in the
 y-axis, it still visually looks like an exponential graph.
 
 
-Cleansed Data Plot
-------------------
+Plot - Cleansed Data
+--------------------
 ![](plot_cleansed_(07-01-2016).png)
 
 Points of interest:
-- Global ranks above 1,000,000 have a lot of points removed because of log graph
-- Rolling median(10) then rolling median(20)... Therefore?
+
+- After applying a filter on the the raw data (removing data points with the
+same number of points but differing global rankings), the data points are
+more concentrated at ranks 500,000 and better. This supports the theory
+that the 'real' leaderboards begins at 500,000 and better.
+
+- After applying a rolling median (10 data points wide) and then a rolling mean
+(20 data points wide), the difference between successive ranks (green line) is
+visually similar to the curve above it (red line). Given also that it is the
+derivative, this implies that the curve (red line) obeys an exponential
+function since the derivative of an exponential function is proportional
+to itself.
+
 
 Conclusion
 ----------
-- Climbing from X to Y is fast due to many fake ranks
-- Climbing from Y to Z is steady exponentional growth (steady difficulty?)
-- Climbing from Z to A is asymptotic
-
+- Climbing the rankings from 1,750,000 to 500,000 should be quick due to many
+dummy or abandoned user accounts.
+- Climbing the rankings from 500,000 to 1 seems to obey a e^e^x function thus
+the difficulty rapidly escalates over that interval.
 
 
 Requirements
