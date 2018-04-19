@@ -78,10 +78,6 @@ dummy or abandoned user accounts.
 the difficulty rapidly escalates over that interval.
 
 
-Requirements
-------------
-See `requirements.txt`.
-
 Author
 -------
 Othman Alikhan, oz.alikhan@gmail.com
